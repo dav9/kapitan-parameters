@@ -45,3 +45,19 @@ parameters:
 ```
 
 The version parameter can be used in the output_path for a dependency.
+
+The order is as well important, the following works:
+
+```yaml
+classes: 
+- version
+- component.${version}.main
+```
+
+The following does not work:
+
+```yaml
+classes: 
+- component.${version}.main
+- version
+```
