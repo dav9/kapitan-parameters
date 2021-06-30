@@ -61,3 +61,5 @@ classes:
 - component.${version}.main
 - version
 ```
+
+In a nutshell: a class reference in a class or target can be interpolated only with parameters defined in classes that are referenced before it; it cannot see parameters defined in the same class or target.

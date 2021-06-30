@@ -1,6 +1,6 @@
 classes: 
-- version
 - component.${version}.main
+- version
 
 parameters:
   type: working with param class
