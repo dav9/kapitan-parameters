@@ -1,0 +1,10 @@
+classes: 
+- version
+- component.${version}.main
+
+parameters:
+  type: working with param class
+
+  kapitan:
+    vars:
+      target: working_with_param_class

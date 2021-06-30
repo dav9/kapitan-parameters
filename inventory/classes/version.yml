@@ -1,0 +1,9 @@
+parameters:
+  version: 1
+
+  kapitan:
+    dependencies:
+    - type: git
+      source: git@github.com:dav9/kapitan-parameters.git
+      ref: main
+      output_path: copy_of_repository/${version}

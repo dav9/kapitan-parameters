@@ -1,0 +1,9 @@
+classes: 
+- component.1.main
+
+parameters:
+  type: basic
+
+  kapitan:
+    vars:
+      target: basic
