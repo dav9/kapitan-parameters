@@ -30,4 +30,18 @@ After `mv inventory/targets/not_working_with_param.yml inventory/targets/not_wor
 
 The difference between [not_working_with_param.yml](inventory/targets/not_working_with_param.yml) and [working_with_param_class.yml](inventory/targets/working_with_param_class.yml) is that the version parameter is defined inside the target, and in the second it is a class that is referenced.
 
-If the class tries to reference a parameter in its classes declaration the same problem appears, however the parameters can be used in the dependencies section. 
+If the class tries to reference a parameter in its classes declaration the same problem appears, however the parameters can be used in the dependencies section:
+
+```yaml
+parameters:
+  version: 1
+
+  kapitan:
+    dependencies:
+    - type: git
+      source: git@github.com:dav9/kapitan-parameters.git
+      ref: main
+      output_path: copy_of_repository/${version}
+```
+
+The version parameter can be used in the output_path for a dependency.
